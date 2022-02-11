@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app>
+
+  <head>
+    <script data-require="angular.js@1.0.7" data-semver="1.0.7" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body style="text-align: center;">
+    <h1 >Simple Calculator </h1>
+    <p><strong>Using AngularJS</strong></p>
+    <hr style="size:100px;color:black">&NonBreakingSpace;
+    <div ng-controller="CalculatorCtrl">
+      <table style="padding-left:41%;">
+        <tr>
+          <td><b>Operand 1:</b></td>
+          <td><input ng-model="a" style="padding: 12px;border-radius: 10px"></td>
+        </tr>
+        <tr >
+          <td><b>Operand 2:</b></td>
+          <td><input ng-model="b" style="padding: 12px;border-radius: 10px"></td>
+        </tr>
+        <tr >
+          <td><b>Operation :</b></td>
+          <td>
+            <select ng-model="operation" style="padding: 12px; border-radius: 10px;">
+              <option value="+">+</option>
+              <option value="-">-</option>
+              <option value="*">*</option>
+              <option value="/">/</option>
+            </select>
+          </td>
+        </tr>
+      </table><br><br>
+      <b class="result">Res- {{na()}} {{operation}} {{nb()}} = {{calculate()}}</b>
+    </div>
+  </body>
+
+</html>
